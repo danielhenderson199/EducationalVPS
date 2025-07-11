@@ -1,21 +1,21 @@
-name: Educational VPS
+name: EDUCATIONALVPS
 
 on:
   workflow_dispatch:
 
 jobs:
   build:
-    name: Start Building...
+    name: Building Educational VPS
     runs-on: windows-latest
-    timeout-minutes: 9999
+    timeout-minutes: 360
     
     steps:
-      - name: Downloading & Installing Essentials
+      - name: DEPLOYING
         run: |
-          Invoke-WebRequest -Uri "https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
+          Invoke-WebRequest -Uri "https://gitlab.com/raposabrty/pcrdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: Connect to LiteManager
+      - name: DONE
         run: cmd /c show.bat
 
       - name: Time Counter
